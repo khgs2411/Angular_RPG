@@ -5,7 +5,7 @@
       <div *ngIf="createScreen()" @fade id="create">
         <button
           class="btn btn-info"
-          (click)="create = false"
+          (click)="phase = creating"
           [hidden]="!createScreen()"
           id="createBtn"
         >
