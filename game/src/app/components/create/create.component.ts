@@ -10,7 +10,7 @@ import { ExploreService } from "src/app/services/explore.service";
   animations: [fade]
 })
 export class CreateComponent implements OnInit {
-  private create: string;
+  private phase: string;
   public player;
 
   constructor(
@@ -19,12 +19,12 @@ export class CreateComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.create = "start";
+    this.phase = "create";
   }
 
   createScreen(): boolean {
-    switch (this.create) {
-      case "start":
+    switch (this.phase) {
+      case "create":
         return true;
       case "creating":
         return false;
