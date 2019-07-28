@@ -1,0 +1,16 @@
+<div id="bg">
+  <section id="gameView">
+    <div id="window">
+      <div *ngIf="createScreen()" @fade id="create">
+        <button
+          class="btn btn-info"
+          (click)="create = false"
+          [hidden]="!createScreen()"
+          id="createBtn"
+        >
+          Create a Caracter
+        </button>
+      </div>
+    </div>
+  </section>
+</div>

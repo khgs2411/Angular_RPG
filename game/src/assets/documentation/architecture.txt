@@ -1,0 +1,9 @@
+
+App component 
+    nests{
+        Nav-bar,
+        World component
+            nests{
+                router-outlet
+            }
+    }
