@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { fade } from "src/assets/animations/animations";
+import { fade, expand } from "src/assets/animations/animations";
 import { PlayerService } from "src/app/services/player.service";
 import { ExploreService } from "src/app/services/explore.service";
 
@@ -7,7 +7,7 @@ import { ExploreService } from "src/app/services/explore.service";
   selector: "app-create",
   templateUrl: "./create.component.html",
   styleUrls: ["./create.component.scss"],
-  animations: [fade]
+  animations: [fade, expand]
 })
 export class CreateComponent implements OnInit {
   private phase: string;

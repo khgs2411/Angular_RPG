@@ -2,7 +2,8 @@ $colors: (
   primary: #005dff,
   primary-light: lighten(#005dff, 40%),
   primary-dark: darken(#005dff, 40%),
-  accent: #fff6bb
+  accent: #fff6bb,
+  dark: lighten(black, 40%)
 );
 @function color($color-name) {
   @return map-get($colors, $color-name);
@@ -39,6 +40,22 @@ $colors: (
         height: 100px;
         width: 300px;
         font-size: 32px;
+      }
+
+      .creationWindow {
+        height: 100%;
+        width: 100%;
+        background-color: color(dark);
+        .createBox {
+          height: 80%;
+          width: 60%;
+          top: 40px;
+          z-index: 1;
+          margin: auto;
+          position: relative;
+          border: 1px solid black;
+          background-color: white;
+        }
       }
     }
   }

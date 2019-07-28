@@ -2,8 +2,10 @@
   <section id="gameView">
     <div id="window">
       <!-- change to *ngIf ; else templates -->
-      <div *ngIf="createScreen()" @fade id="create">
+      <div @fade id="create">
         <button
+          @fade
+          *ngIf="phase == 'create'; else elseBlock"
           class="btn btn-info"
           (click)="phase = creating"
           [hidden]="!createScreen()"
@@ -11,6 +13,11 @@
         >
           Create a Caracter
         </button>
+        <ng-template #elseBlock>
+          <div class="creationWindow">
+            <div @expand class="createBox"></div>
+          </div>
+        </ng-template>
       </div>
     </div>
   </section>
