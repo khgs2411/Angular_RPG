@@ -1,21 +1,58 @@
 <div id="bg">
   <section id="gameView">
     <div id="window">
-      <!-- change to *ngIf ; else templates -->
-      <div @fade id="create">
+      <!-- [hidden]="!createScreen()" -->
+      <!-- change to *ngIf ; else templates  -->
+      <div *ngIf="phase != 'done'" @fade id="create">
         <button
           @fade
           *ngIf="phase == 'create'; else elseBlock"
           class="btn btn-info"
-          (click)="phase = creating"
-          [hidden]="!createScreen()"
+          (click)="changePhase(creating)"
+          [hidden]="phase != 'create'"
           id="createBtn"
         >
           Create a Caracter
         </button>
         <ng-template #elseBlock>
           <div class="creationWindow">
-            <div @expand class="createBox"></div>
+            <div *ngIf="phase == creating" @expand class="createBox">
+              <div class="ninety">
+                <p>Create your character</p>
+                <div class="col">
+                  <span>Name : </span>
+                  <input
+                    class="form-control center"
+                    [(ngModel)]="player.name"
+                  />
+                </div>
+                <div class="col">
+                  <span>Title : </span>
+                  <input
+                    class="form-control center"
+                    [(ngModel)]="player.title"
+                  />
+                </div>
+                <div>
+                  <p>Stats:</p>
+                  <div class="col">
+                    <span>Attack</span><span>{{ player.stats.attack }}</span>
+                  </div>
+                  <div class="col">
+                    <span>Defence</span><span>{{ player.stats.defence }}</span>
+                  </div>
+                  <div class="col">
+                    <span>Agility</span><span>{{ player.stats.agility }}</span>
+                  </div>
+                  <div class="col">
+                    <span>Health</span><span>{{ player.stats.$health }}</span>
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-success" (click)="createCharacter(player)">
+                Create
+              </button>
+            </div>
           </div>
         </ng-template>
       </div>

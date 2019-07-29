@@ -1,5 +1,6 @@
 export interface Character {
   name: string;
+  title: string;
   lvl: number;
   stats: Stats;
 }

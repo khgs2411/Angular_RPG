@@ -9,6 +9,15 @@ $colors: (
   @return map-get($colors, $color-name);
 }
 
+.center {
+  text-align: center;
+}
+.ninety {
+  height: 90%;
+  width: 90%;
+  margin: auto;
+}
+
 #bg {
   background-color: color(primary-light);
   width: 100%;

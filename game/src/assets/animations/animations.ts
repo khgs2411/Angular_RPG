@@ -66,7 +66,10 @@ export let fade = trigger("fade", [
   ])
 ]);
 export let expand = trigger("expand", [
-  transition("void => *", [style({ opacity: 0, height:"10%", width:"10%"}), animate(1000)]),
+  transition("void => *", [
+    style({ opacity: 0, height: "10%", width: "10%" }),
+    animate(500)
+  ]),
   transition("* => void", [
     style({ opacity: 1 }),
     animate(200, style({ opacity: 0 }))

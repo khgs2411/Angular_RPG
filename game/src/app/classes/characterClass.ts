@@ -1,35 +1,23 @@
 import { Character } from "../interfaces/character";
-
-export class Stats {
-  public attack: number;
-  public defence: number;
-  public agility: number;
-  public health: number;
-  public $health: number;
-  constructor(val) {
-    this.initiateStats(val);
-  }
-  initiateStats(val) {
-    this.attack = val.attack;
-    this.defence = val.defence;
-    this.agility = val.agility;
-    this.health = val.health;
-    this.$health = val.health;
-  }
-
-  public test() {
-    console.log("test");
-  }
-}
+import { Stats } from "../classes/statsClass";
 
 export class Player {
   public character: Character;
-  constructor(val) {
-    // this.create(val);
+  constructor() {}
+
+  public create(val) {
+    this.character.name = val.name;
+    this.character.lvl = 1;
+    return this.character;
   }
 
-  create(val, save?) {
-    this.character.stats = new Stats(val);
-    this.character.name = val.name;
+  public initiate() {
+    this.character = {
+      name: "",
+      title: "",
+      lvl: 0,
+      stats: new Stats()
+    };
+    return this.character;
   }
 }
