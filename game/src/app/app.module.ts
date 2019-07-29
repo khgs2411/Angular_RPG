@@ -9,13 +9,15 @@ import { HttpClientModule } from "@angular/common/http";
 import { NavbarComponent } from "./components/navbar/navbar.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { CreateComponent } from "./components/create/create.component";
+import { ExploreComponent } from './components/explore/explore.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WorldComponent,
     NavbarComponent,
-    CreateComponent
+    CreateComponent,
+    ExploreComponent
   ],
   imports: [
     BrowserModule,

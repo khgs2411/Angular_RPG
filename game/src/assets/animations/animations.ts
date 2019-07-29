@@ -8,6 +8,18 @@ import {
 
 export function animationInformation() {
   //https://angular.io/guide/transition-and-triggers
+  // example on how to change states dynamically
+  //   currentState = 'initial';
+  // changeState() {
+  //   this.currentState = this.currentState === 'initial' ? 'final' : 'initial';
+  // }
+  //   <h3>Change the div size</h3>
+  //   <button (click)="changeState()">Change Size</button>
+  //   <br />
+  //   <div [@changeDivSize]=currentState></div>
+  //   <br />
+  //
+  //
   // animations notes:
   //   any element created will be affected by the `trigger` with the void=> * type `transition`
   //   void : element before creation
@@ -60,18 +72,14 @@ animations: [
 
 export let fade = trigger("fade", [
   transition("void => *", [style({ opacity: 0 }), animate(1000)]),
-  transition("* => void", [
-    style({ opacity: 1 }),
-    animate(200, style({ opacity: 0 }))
-  ])
+  transition("* => void", [animate(500), style({ opacity: 0 })])
 ]);
+
 export let expand = trigger("expand", [
   transition("void => *", [
-    style({ opacity: 0, height: "10%", width: "10%" }),
-    animate(500)
+    style({ width: "0%" }),
+    animate(1000),
+    style({ width: "100%" })
   ]),
-  transition("* => void", [
-    style({ opacity: 1 }),
-    animate(200, style({ opacity: 0 }))
-  ])
+  transition("* => void", [animate(500), style({ width: "0%" })])
 ]);

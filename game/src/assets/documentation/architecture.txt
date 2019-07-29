@@ -4,6 +4,8 @@ App component
         Nav-bar,
         World component
             nests{
-                router-outlet
+                router-outlet (create-component ,explore-comonent)
+                combat-component
+                character-component(stats and equips)
             }
     }

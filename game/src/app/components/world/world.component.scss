@@ -1,0 +1,25 @@
+$colors: (
+  primary: #005dff,
+  primary-light: lighten(#005dff, 40%),
+  primary-dark: darken(#005dff, 40%),
+  accent: #fff6bb,
+  dark: lighten(black, 40%)
+);
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+// clip-path: polygon(100% 0, 100% 82%, 45% 100%, 0 100%, 0 0);
+
+#bg {
+  // background-color: color(primary-light);
+  background-image: url("../../../assets/images/worldBG.png");
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+#gameView {
+  position: relative;
+  margin-top: 20px;
+}

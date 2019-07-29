@@ -1,61 +1,49 @@
-<div id="bg">
-  <section id="gameView">
-    <div id="window">
-      <!-- [hidden]="!createScreen()" -->
-      <!-- change to *ngIf ; else templates  -->
-      <div *ngIf="phase != 'done'" @fade id="create">
-        <button
-          @fade
-          *ngIf="phase == 'create'; else elseBlock"
-          class="btn btn-info"
-          (click)="changePhase(creating)"
-          [hidden]="phase != 'create'"
-          id="createBtn"
-        >
-          Create a Caracter
-        </button>
-        <ng-template #elseBlock>
-          <div class="creationWindow">
-            <div *ngIf="phase == creating" @expand class="createBox">
-              <div class="ninety">
-                <p>Create your character</p>
-                <div class="col">
-                  <span>Name : </span>
-                  <input
-                    class="form-control center"
-                    [(ngModel)]="player.name"
-                  />
-                </div>
-                <div class="col">
-                  <span>Title : </span>
-                  <input
-                    class="form-control center"
-                    [(ngModel)]="player.title"
-                  />
-                </div>
-                <div>
-                  <p>Stats:</p>
-                  <div class="col">
-                    <span>Attack</span><span>{{ player.stats.attack }}</span>
-                  </div>
-                  <div class="col">
-                    <span>Defence</span><span>{{ player.stats.defence }}</span>
-                  </div>
-                  <div class="col">
-                    <span>Agility</span><span>{{ player.stats.agility }}</span>
-                  </div>
-                  <div class="col">
-                    <span>Health</span><span>{{ player.stats.$health }}</span>
-                  </div>
-                </div>
-              </div>
-              <button class="btn btn-success" (click)="createCharacter(player)">
-                Create
-              </button>
+<div *ngIf="phase != 'finish'" @fade id="window">
+  <div @fade *ngIf="phase != 'done'" id="create">
+    <button
+      *ngIf="phase == 'create'"
+      class="btn btn-info"
+      (click)="changePhase(creating)"
+      [hidden]="phase != 'create'"
+      id="createBtn"
+    >
+      Create a Caracter
+    </button>
+    <div *ngIf="phase == creating" @fade class="creationWindow">
+      <div class="createBox">
+        <div class="">
+          <p>Create your character</p>
+          <div class="col">
+            <span>Name : </span>
+            <input class="form-control center" [(ngModel)]="player.name" />
+          </div>
+          <div class="col">
+            <span>Title : </span>
+            <input class="form-control center" [(ngModel)]="player.title" />
+          </div>
+          <div>
+            <p>Stats:</p>
+            <div class="col">
+              <span>Attack</span><span>{{ player.stats.attack }}</span>
+            </div>
+            <div class="col">
+              <span>Defence</span><span>{{ player.stats.defence }}</span>
+            </div>
+            <div class="col">
+              <span>Agility</span><span>{{ player.stats.agility }}</span>
+            </div>
+            <div class="col">
+              <span>Health</span><span>{{ player.stats.$health }}</span>
             </div>
           </div>
-        </ng-template>
+        </div>
+        <button class="btn btn-success" (click)="createCharacter(player)">
+          Create
+        </button>
       </div>
     </div>
-  </section>
+  </div>
+  <div *ngIf="phase == 'done'" class="center" id="embark" @fade>
+    You are about to embark on your adventure...
+  </div>
 </div>

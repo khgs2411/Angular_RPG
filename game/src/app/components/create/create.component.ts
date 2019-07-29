@@ -3,6 +3,7 @@ import { fade, expand } from "src/assets/animations/animations";
 import { PlayerService } from "src/app/services/player.service";
 import { ExploreService } from "src/app/services/explore.service";
 import { Character } from "src/app/interfaces/character";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-create",
@@ -13,7 +14,13 @@ import { Character } from "src/app/interfaces/character";
 export class CreateComponent implements OnInit {
   private phase: string;
   public player: Character;
-  constructor(private service: PlayerService) {}
+  public isOpen: boolean;
+  constructor(private service: PlayerService, private router: Router) {}
+
+  devParams() {
+    this.player.name = "Defauler";
+    this.player.title = "The Adventurer";
+  }
 
   ngOnInit() {
     this.initiateLocalVariables();
@@ -25,28 +32,23 @@ export class CreateComponent implements OnInit {
     this.devParams();
   }
 
-  // createScreen(): boolean {
-  //   switch (this.phase) {
-  //     case "create":
-  //       return true;
-  //     case "creating":
-  //       return false;
-  //     case "done":
-  //       return false;
-  //   }
-  // }
-
-  devParams() {
-    this.player.name = "Defauler";
-    this.player.title = "The Adventurer";
-  }
-
   changePhase(val: string) {
     this.phase = val;
+    return this.phase;
   }
 
   createCharacter(val: object): void {
-    this.player = this.service.createCharacter(val);
     this.changePhase("done");
+    this.embark();
+    this.player = this.service.createCharacter(val);
+  }
+
+  embark() {
+    setTimeout(() => {
+      this.changePhase("finish");
+      setTimeout(() => {
+        this.router.navigate(["explore"]);
+      }, 1000);
+    }, 2000);
   }
 }
