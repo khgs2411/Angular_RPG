@@ -14,14 +14,11 @@ $colors: (
 
 #navBar {
   height: 90%;
-  width: 10%;
-  background-color: color(primary-dark);
+  width: 180px;
+  background-color: red;
+  position: fixed;
 }
 
-#navBtn {
-  z-index: 1;
-  position: absolute;
-}
-.navbarScreen {
+#navbarScreen {
   position: absolute;
 }

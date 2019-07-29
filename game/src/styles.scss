@@ -2,6 +2,7 @@
 body,
 html {
   height: 100%;
+  overflow-y: hidden;
 }
 body {
   margin: 0;
@@ -11,4 +12,12 @@ body {
   height: 100%;
   width: 100%;
   margin: auto;
+}
+
+.centerText {
+  text-align: center;
+}
+
+.overMe {
+  z-index: 1;
 }

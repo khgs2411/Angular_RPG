@@ -15,11 +15,11 @@
           <p>Create your character</p>
           <div class="col">
             <span>Name : </span>
-            <input class="form-control center" [(ngModel)]="player.name" />
+            <input class="form-control centerText" [(ngModel)]="player.name" />
           </div>
           <div class="col">
             <span>Title : </span>
-            <input class="form-control center" [(ngModel)]="player.title" />
+            <input class="form-control centerText" [(ngModel)]="player.title" />
           </div>
           <div>
             <p>Stats:</p>
@@ -43,7 +43,7 @@
       </div>
     </div>
   </div>
-  <div *ngIf="phase == 'done'" class="center" id="embark" @fade>
+  <div *ngIf="phase == 'done'" class="centerText" id="embark" @fade>
     You are about to embark on your adventure...
   </div>
 </div>

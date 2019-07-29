@@ -1,4 +1,12 @@
-<div class="fullscreen navbarScreen">
-  <span><button id="navBtn btn" (click)="toggle()">OPEN</button></span
-  ><span><div id="navBar" [@toggle]="isOpen ? 'open' : 'closed'"></div></span>
+<div id="navbarScreen" class="overMe">
+  <span id="navBar" [@navbarToggle]="isOpen ? 'open' : 'closed'"> </span>
+  <button
+    id="navBtn"
+    (click)="toggle()"
+    [@navbarToggle]="isOpen ? 'right' : 'left'"
+    type="button"
+    class="btn btn-info"
+  >
+    OPEN
+  </button>
 </div>
