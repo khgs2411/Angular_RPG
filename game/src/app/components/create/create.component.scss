@@ -23,10 +23,10 @@
     background-color: white;
     text-align: center;
     #createBtn {
-      margin-top: 60%;
-      height: 100px;
-      width: 300px;
-      font-size: 32px;
+      min-width: 102px;
+      position: relative;
+      font-size: 1.5em;
+      top: 80%;
     }
     .creationWindow {
       height: 100%;

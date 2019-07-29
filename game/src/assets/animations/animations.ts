@@ -83,3 +83,10 @@ export let expand = trigger("expand", [
   ]),
   transition("* => void", [animate(500), style({ width: "0%" })])
 ]);
+
+export let toggle = trigger("toggle", [
+  state("open", style({})),
+  state("closed", style({})),
+  transition("open => closed", [animate("1s")]),
+  transition("closed => open", [animate("0.5s")])
+]);
