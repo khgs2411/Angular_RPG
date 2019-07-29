@@ -1,4 +1,4 @@
-body,html{height:100%}/*!
+body,html{height:100%;overflow-y:hidden}.borders{border-style:ridge;border-radius:20px}.fullscreen{height:100%;width:100%;margin:auto}.centerText{margin-top:5%;text-align:center}.overMe{z-index:1}.opacityBg{height:100%;width:100%;opacity:.8;background-color:#999;position:absolute}.margins{margin:3px}#choicePanel{width:100%;margin:15%}/*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
  * Copyright 2011-2019 Twitter, Inc.

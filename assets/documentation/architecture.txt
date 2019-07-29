@@ -1,12 +1,23 @@
 ng build --prod --base-href https://khgs2411.github.io/Angular_RPG/
-ngh
+ngh --dir dist/game
+
 App component 
     nests{
-        Nav-bar,
         World component
             nests{
-                router-outlet (create-component ,explore-comonent)
-                combat-component
-                character-component(stats and equips)
+            router-outlet ( 
+                create-component, 
+                explore-component
+                    nests{
+                        combat-component
+                    }
+            ) 
+            Nav-bar
+            nests{
+                character-component
             }
+        }
+        character-class
+        stats-class
+        spells-class
     }

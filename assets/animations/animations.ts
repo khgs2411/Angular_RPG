@@ -83,3 +83,17 @@ export let expand = trigger("expand", [
   ]),
   transition("* => void", [animate(500), style({ width: "0%" })])
 ]);
+
+export let navbarToggle = trigger("navbarToggle", [
+  state("open", style({ width: "180px" })),
+  state("closed", style({ width: "0%" })),
+  transition("closed => open", [animate(300), style({ width: "180px" })]),
+  transition("open => closed", [animate(300)]),
+  state("right", style({ transform: "translateX(182px)" })),
+  state("left", style({ transform: "translateX(0%)" })),
+  transition("right => left", [
+    animate(300),
+    style({ transform: "translateX(182px)" })
+  ]),
+  transition("left => right", [animate(300)])
+]);
