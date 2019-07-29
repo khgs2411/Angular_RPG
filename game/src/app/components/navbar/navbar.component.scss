@@ -11,3 +11,17 @@ $colors: (
 }
 
 // clip-path: polygon(100% 0, 100% 82%, 45% 100%, 0 100%, 0 0);
+
+#navBar {
+  height: 90%;
+  width: 10%;
+  background-color: color(primary-dark);
+}
+
+#navBtn {
+  z-index: 1;
+  position: absolute;
+}
+.navbarScreen {
+  position: absolute;
+}
