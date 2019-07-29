@@ -1,5 +1,6 @@
 ng build --prod --base-href https://khgs2411.github.io/Angular_RPG/
-ngh
+ngh --dir dist/game
+
 App component 
     nests{
         Nav-bar,
