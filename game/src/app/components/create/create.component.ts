@@ -23,8 +23,8 @@ export class CreateComponent implements OnInit {
   ) {}
 
   devParams() {
-    this.player.name = "Defaulter";
-    this.player.title = "The Adventurer";
+    this.player.name = "";
+    this.player.title = "Adventurer";
   }
 
   ngOnInit() {

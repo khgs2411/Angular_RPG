@@ -9,3 +9,17 @@
 #navbarScreen {
   position: absolute;
 }
+
+#deleteWindow {
+  font-size: 15px;
+  width: fit-content;
+  height: fit-content;
+  // margin-left: 5%;
+  margin-top: 50%;
+}
+
+#deleteBtn {
+  position: absolute;
+  top: 77.5%;
+  left: 7%;
+}

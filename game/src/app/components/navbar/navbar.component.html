@@ -2,6 +2,29 @@
   <span id="navBar" [@navbarToggle]="isOpen ? 'open' : 'closed'">
     <!-- <app-character></app-character> -->
     {{ player.character.name }}
+    <ng-template [ngIf]="delete">
+      <div id="deleteWindow" class="borders">
+        <p class="centerText">
+          Are you sure you want to delete your character?
+        </p>
+        <div id="choicePanel">
+          <button (click)="deleteCharacter()" class="margins btn btn-danger">
+            Yes
+          </button>
+          <button (click)="delete = false" class="margins btn btn-success">
+            No
+          </button>
+        </div>
+      </div>
+    </ng-template>
+    <button
+      [hidden]="delete"
+      (click)="delete = true"
+      id="deleteBtn"
+      class="btn btn-danger"
+    >
+      Delete Character
+    </button>
   </span>
   <button
     id="navBtn"

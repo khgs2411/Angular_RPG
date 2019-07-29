@@ -37,6 +37,7 @@ export class PlayerService {
       console.log("SAVE LOADED - Character:", this.player.character);
       this.load = true;
     } else {
+      this.initiateCharacter();
       console.log("NO SAVE FILE");
     }
     return this.load;

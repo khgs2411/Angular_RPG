@@ -10,6 +10,11 @@ body {
 
 // make a polygon clip-path: polygon(100% 0, 100% 82%, 45% 100%, 0 100%, 0 0);
 
+.borders {
+  border-style: ridge;
+  border-radius: 20px;
+}
+
 $colors: (
   primary: #005dff,
   primary-light: lighten(#005dff, 40%),
@@ -28,9 +33,27 @@ $colors: (
 }
 
 .centerText {
+  margin-top: 5%;
   text-align: center;
 }
 
 .overMe {
   z-index: 1;
+}
+
+.opacityBg {
+  height: 100%;
+  width: 100%;
+  opacity: 0.8;
+  background-color: lighten(black, 60%);
+  position: absolute;
+}
+
+.margins {
+  margin: 3px;
+}
+
+#choicePanel {
+  width: 100%;
+  margin: 15%;
 }
