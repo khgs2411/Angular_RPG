@@ -12,7 +12,7 @@ export class NavbarComponent implements OnInit {
   @Input() public player;
 
   public isOpen: boolean;
-  private delete: boolean;
+  public delete: boolean;
   constructor(private router: Router, private service: PlayerService) {}
 
   ngOnInit() {
