@@ -10,6 +10,7 @@ import { NavbarComponent } from "./components/navbar/navbar.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { CreateComponent } from "./components/create/create.component";
 import { ExploreComponent } from "./components/explore/explore.component";
+import { CharacterComponent } from './components/character/character.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ExploreComponent } from "./components/explore/explore.component";
     WorldComponent,
     NavbarComponent,
     CreateComponent,
-    ExploreComponent
+    ExploreComponent,
+    CharacterComponent
   ],
   imports: [
     BrowserModule,

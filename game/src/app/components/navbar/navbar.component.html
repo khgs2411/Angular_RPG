@@ -1,5 +1,8 @@
 <div id="navbarScreen" class="overMe">
-  <span id="navBar" [@navbarToggle]="isOpen ? 'open' : 'closed'"> </span>
+  <span id="navBar" [@navbarToggle]="isOpen ? 'open' : 'closed'">
+    <!-- <app-character></app-character> -->
+    {{ player.character.name }}
+  </span>
   <button
     id="navBtn"
     (click)="toggle()"

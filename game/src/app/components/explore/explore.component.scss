@@ -1,9 +1,13 @@
+$border: ridge;
+
 #window {
   margin-top: 10px;
   width: 90%;
   height: -webkit-fill-available;
   margin: auto;
   position: relative;
+  border-style: $border;
+  border-radius: 20px;
   padding: 2px;
   background-color: white;
   #view {

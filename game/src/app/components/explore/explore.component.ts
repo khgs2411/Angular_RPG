@@ -9,11 +9,10 @@ import { expand, fade } from "src/assets/animations/animations";
 })
 export class ExploreComponent implements OnInit {
   public view: boolean;
-  constructor() {
-    this.view = false;
-  }
+  constructor() {}
 
   ngOnInit() {
+    this.view = false;
     this.initiateLocalVariables();
   }
 

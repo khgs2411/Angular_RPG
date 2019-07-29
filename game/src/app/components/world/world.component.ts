@@ -1,7 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { PlayerService } from "src/app/services/player.service";
 import { Router } from "@angular/router";
-import { CookieService } from "ngx-cookie-service";
 import { fade } from "src/assets/animations/animations";
 
 @Component({
@@ -11,16 +10,14 @@ import { fade } from "src/assets/animations/animations";
   animations: [fade]
 })
 export class WorldComponent implements OnInit {
-  public player;
-  constructor(
-    private cookie: CookieService,
-    private service: PlayerService,
-    private router: Router
-  ) {
-    this.service.deleteSaveFile();
+  constructor(private service: PlayerService, private router: Router) {}
+
+  get player() {
+    return this.service.player;
   }
 
   ngOnInit() {
+    // this.service.deleteSaveFile();
     if (this.service.loadSaveFile()) {
       this.router.navigate(["explore"]);
     } else {

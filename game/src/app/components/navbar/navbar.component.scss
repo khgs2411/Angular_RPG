@@ -1,7 +1,7 @@
 #navBar {
   height: 90%;
   width: 180px;
-  background-color: red;
+  background-color: darken(white, 20%);
   position: fixed;
   clip-path: polygon(100% 0, 100% 82%, 45% 100%, 0 100%, 0 0);
 }

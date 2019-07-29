@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
 import { navbarToggle, fade, expand } from "src/assets/animations/animations";
 @Component({
   selector: "app-navbar",
@@ -7,7 +7,10 @@ import { navbarToggle, fade, expand } from "src/assets/animations/animations";
   animations: [navbarToggle, fade, expand]
 })
 export class NavbarComponent implements OnInit {
+  @Input() public player;
+
   public isOpen: boolean;
+
   constructor() {}
 
   ngOnInit() {
