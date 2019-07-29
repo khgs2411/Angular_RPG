@@ -12,7 +12,7 @@ import { Router } from "@angular/router";
   animations: [fade, expand]
 })
 export class CreateComponent implements OnInit {
-  private phase: string;
+  public phase: string;
   public player: Character;
   public isOpen: boolean;
   constructor(private service: PlayerService, private router: Router) {}

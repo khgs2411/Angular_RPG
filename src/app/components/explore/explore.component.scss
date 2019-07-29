@@ -6,4 +6,9 @@
   position: relative;
   padding: 2px;
   background-color: black;
+  #view {
+    height: 100%;
+    width: 100%;
+    background-image: url("../../../assets//images/exploreBG.jpg");
+  }
 }
