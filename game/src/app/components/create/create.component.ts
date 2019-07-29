@@ -4,6 +4,7 @@ import { PlayerService } from "src/app/services/player.service";
 import { ExploreService } from "src/app/services/explore.service";
 import { Character } from "src/app/interfaces/character";
 import { Router } from "@angular/router";
+import { CookieService } from "ngx-cookie-service";
 
 @Component({
   selector: "app-create",
@@ -15,7 +16,11 @@ export class CreateComponent implements OnInit {
   public phase: string;
   public player: Character;
   public isOpen: boolean;
-  constructor(private service: PlayerService, private router: Router) {}
+  constructor(
+    private service: PlayerService,
+    private router: Router,
+    private cookie: CookieService
+  ) {}
 
   devParams() {
     this.player.name = "Defauler";

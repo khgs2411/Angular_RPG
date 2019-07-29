@@ -1,22 +1,9 @@
-// clip-path: polygon(100% 0, 100% 82%, 45% 100%, 0 100%, 0 0);
-$colors: (
-  primary: #005dff,
-  primary-light: lighten(#005dff, 40%),
-  primary-dark: darken(#005dff, 40%),
-  accent: #fff6bb,
-  dark: lighten(black, 40%)
-);
-@function color($color-name) {
-  @return map-get($colors, $color-name);
-}
-
-// clip-path: polygon(100% 0, 100% 82%, 45% 100%, 0 100%, 0 0);
-
 #navBar {
   height: 90%;
   width: 180px;
   background-color: red;
   position: fixed;
+  clip-path: polygon(100% 0, 100% 82%, 45% 100%, 0 100%, 0 0);
 }
 
 #navbarScreen {

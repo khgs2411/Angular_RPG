@@ -1,14 +1,3 @@
-$colors: (
-  primary: #005dff,
-  primary-light: lighten(#005dff, 40%),
-  primary-dark: darken(#005dff, 40%),
-  accent: #fff6bb,
-  dark: lighten(black, 40%)
-);
-@function color($color-name) {
-  @return map-get($colors, $color-name);
-}
-
 // clip-path: polygon(100% 0, 100% 82%, 45% 100%, 0 100%, 0 0);
 
 #bg {
@@ -27,5 +16,6 @@ nav {
 
 #gameView {
   position: relative;
-  margin-top: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }

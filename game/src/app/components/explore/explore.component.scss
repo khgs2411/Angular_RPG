@@ -1,14 +1,14 @@
 #window {
   margin-top: 10px;
-  width: 94%;
-  height: 760px;
+  width: 90%;
+  height: -webkit-fill-available;
   margin: auto;
   position: relative;
   padding: 2px;
-  background-color: black;
+  background-color: white;
   #view {
     height: 100%;
     width: 100%;
-    background-image: url("../../../assets//images/exploreBG.jpg");
+    // background-image: url("../../../assets//images/exploreBG.jpg");
   }
 }
