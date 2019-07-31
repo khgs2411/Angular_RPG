@@ -14,22 +14,35 @@
     width: 100%;
     overflow: hidden;
     #exploration {
-      width: 1800px;
+      width: 1900px;
       // width: -webkit-fill-available;
       height: -webkit-fill-available;
       // height: 1800px;
       display: block;
       z-index: 1;
-      background: linear-gradient(
-        to bottom,
-        rgba(30, 87, 153, 1) 0%,
-        rgb(214, 172, 1) 62%,
-        rgba(214, 8, 8, 0.7) 68%,
-        rgba(125, 185, 232, 0) 100%
-      );
+      // background: linear-gradient(
+      //   to bottom,
+      //   rgba(30, 87, 153, 1) 0%,
+      //   rgb(214, 172, 1) 62%,
+      //   rgba(214, 8, 8, 0.7) 68%,
+      //   rgba(125, 185, 232, 0) 100%
+      // );
+      background-image: url("../../../assets/images/exploreBG.jpg");
       #move {
-        margin-left: 27%;
+        margin-left: 5%;
         padding-top: 35%;
+      }
+
+      .mobileBtn {
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        top: 30%;
+      }
+
+      .mobileBtnRight {
+        top: 30%;
+        right: 1px;
       }
     }
   }

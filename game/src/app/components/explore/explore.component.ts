@@ -20,7 +20,7 @@ export class ExploreComponent implements OnInit {
   }
 
   initiateLocalVariables() {
-    this.move = 485;
+    this.move = 90;
     setTimeout(() => {
       this.view = true;
       this.myElement = document.querySelector("#move");
@@ -42,17 +42,23 @@ export class ExploreComponent implements OnInit {
   }
 
   moveRight() {
-    if (this.move < 1700) {
-      document.getElementById("view").scrollBy(5, 0);
-      this.move += 15;
+    if (this.move < 1750) {
+      this.move += 20;
       document.getElementById("move").style.marginLeft = "" + this.move + "px";
+      console.log(this.move);
+      if (this.move >= 1360) {
+        document.getElementById("view").scrollBy(25, 0);
+      }
     }
   }
   moveLeft() {
     if (this.move > 100) {
-      document.getElementById("view").scrollBy(-5, 0);
-      this.move += -15;
+      this.move += -20;
       document.getElementById("move").style.marginLeft = "" + this.move + "px";
+      console.log(this.move);
+      if (this.move <= 1360) {
+        document.getElementById("view").scrollBy(-25, 0);
+      }
     }
   }
 }

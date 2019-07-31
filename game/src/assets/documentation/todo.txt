@@ -2,3 +2,5 @@ Welcome Tite animation - jump from below + fade in
 design the navbar
 think of a way the world works
 think of a title
+
+give jump
