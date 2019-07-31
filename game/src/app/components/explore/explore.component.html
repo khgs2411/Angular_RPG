@@ -1,5 +1,11 @@
-<!-- <main id="exploreBg"> -->
 <div @expand id="window">
-  <div @fade *ngIf="view" id="view"></div>
+  <div @fade *ngIf="view" id="view" (onkeydown)="scrollFunc($event)">
+    <div id="exploration">
+      <div id="move">
+        <app-character></app-character>
+      </div>
+    </div>
+  </div>
 </div>
+
 <!-- </main> -->

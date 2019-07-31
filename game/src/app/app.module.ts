@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { CreateComponent } from "./components/create/create.component";
 import { ExploreComponent } from "./components/explore/explore.component";
 import { CharacterComponent } from './components/character/character.component';
+import { SanitizePipe } from './utils/pipes/sanitize.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CharacterComponent } from './components/character/character.component';
     NavbarComponent,
     CreateComponent,
     ExploreComponent,
-    CharacterComponent
+    CharacterComponent,
+    SanitizePipe
   ],
   imports: [
     BrowserModule,

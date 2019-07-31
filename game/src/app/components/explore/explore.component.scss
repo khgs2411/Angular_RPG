@@ -6,12 +6,31 @@
   border-style: ridge;
   border-radius: 20px;
   position: relative;
-
   padding: 2px;
   background-color: white;
+
   #view {
-    height: 100%;
+    height: auto;
     width: 100%;
-    // background-image: url("../../../assets//images/exploreBG.jpg");
+    overflow: hidden;
+    #exploration {
+      width: 1800px;
+      // width: -webkit-fill-available;
+      height: -webkit-fill-available;
+      // height: 1800px;
+      display: block;
+      z-index: 1;
+      background: linear-gradient(
+        to bottom,
+        rgba(30, 87, 153, 1) 0%,
+        rgb(214, 172, 1) 62%,
+        rgba(214, 8, 8, 0.7) 68%,
+        rgba(125, 185, 232, 0) 100%
+      );
+      #move {
+        margin-left: 27%;
+        padding-top: 35%;
+      }
+    }
   }
 }

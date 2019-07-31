@@ -15,8 +15,4 @@ export class Stats {
     this.health = this.attack * 10 + 100;
     this.$health = this.health;
   }
-
-  public test() {
-    console.log("test");
-  }
 }

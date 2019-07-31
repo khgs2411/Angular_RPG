@@ -2,6 +2,7 @@
   <span id="navBar" [@navbarToggle]="isOpen ? 'open' : 'closed'">
     <!-- <app-character></app-character> -->
     {{ player.character.name }}
+    <app-character></app-character>
     <ng-template [ngIf]="delete">
       <div id="deleteWindow" class="borders">
         <p class="centerText">
@@ -18,6 +19,7 @@
       </div>
     </ng-template>
     <button
+      *ngIf="this.player.character.name != ''"
       [hidden]="delete"
       (click)="delete = true"
       id="deleteBtn"
