@@ -10,8 +10,7 @@ import { NavbarComponent } from "./components/navbar/navbar.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { CreateComponent } from "./components/create/create.component";
 import { ExploreComponent } from "./components/explore/explore.component";
-import { CharacterComponent } from './components/character/character.component';
-import { SanitizePipe } from './utils/pipes/sanitize.pipe';
+import { CharacterComponent } from "./components/character/character.component";
 
 @NgModule({
   declarations: [
@@ -20,8 +19,7 @@ import { SanitizePipe } from './utils/pipes/sanitize.pipe';
     NavbarComponent,
     CreateComponent,
     ExploreComponent,
-    CharacterComponent,
-    SanitizePipe
+    CharacterComponent
   ],
   imports: [
     BrowserModule,
