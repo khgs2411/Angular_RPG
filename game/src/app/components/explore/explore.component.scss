@@ -12,18 +12,22 @@ $desktop: 414px;
   border-style: ridge;
   position: absolute;
   background-color: white;
+  left: 5%;
 
   #view {
-    height: auto;
+    height: -webkit-fill-available;
     width: 100%;
     overflow: hidden;
     position: relative;
     #exploration {
       width: 1900px;
-      height: -webkit-fill-available;
+      // height: -webkit-fill-available;
+      height: 760px;
       display: inline-block;
       background-image: url("../../../assets/images/exploreBG.jpg");
       #move {
+        position: relative;
+        top: 89%;
       }
 
       .mobileBtn {

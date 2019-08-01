@@ -10,7 +10,6 @@ import { ThrowStmt } from "@angular/compiler";
 })
 export class ExploreComponent implements OnInit {
   public view: boolean;
-  public myElement: HTMLElement;
   public move: number;
   constructor() {}
 
@@ -20,10 +19,9 @@ export class ExploreComponent implements OnInit {
   }
 
   initiateLocalVariables() {
-    this.move = 90;
+    this.move = 0;
     setTimeout(() => {
       this.view = true;
-      this.myElement = document.querySelector("#move");
     }, 1500);
   }
 
@@ -45,16 +43,16 @@ export class ExploreComponent implements OnInit {
     if (this.move < 1750) {
       this.move += 20;
       document.getElementById("move").style.marginLeft = "" + this.move + "px";
-      if (this.move >= 1360) {
+      if (this.move >= 800) {
         document.getElementById("view").scrollBy(25, 0);
       }
     }
   }
   moveLeft() {
-    if (this.move > 100) {
+    if (this.move > 0) {
       this.move += -20;
       document.getElementById("move").style.marginLeft = "" + this.move + "px";
-      if (this.move <= 1360) {
+      if (this.move <= 1200) {
         document.getElementById("view").scrollBy(-25, 0);
       }
     }

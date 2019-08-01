@@ -17,6 +17,7 @@ export class WorldComponent implements OnInit {
   }
 
   ngOnInit() {
+    // this.service.deleteSaveFile();
     if (this.service.loadSaveFile()) {
       this.router.navigate(["explore"]);
     } else {

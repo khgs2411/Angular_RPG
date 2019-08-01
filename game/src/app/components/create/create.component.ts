@@ -32,13 +32,9 @@ export class CreateComponent implements OnInit {
   }
 
   initiateLocalVariables() {
-    if (this.player.name != "") {
-      this.phase = "create";
-      this.player = this.service.initiateCharacter();
-      this.devParams();
-    } else {
-      alert("Please enter a Character name");
-    }
+    this.phase = "create";
+    this.player = this.service.initiateCharacter();
+    this.devParams();
   }
 
   changePhase(val: string) {
@@ -47,9 +43,13 @@ export class CreateComponent implements OnInit {
   }
 
   createCharacter(val: object): void {
-    this.changePhase("done");
-    this.embark();
-    this.player = this.service.createCharacter(val);
+    if (this.player.name != "") {
+      this.changePhase("done");
+      this.embark();
+      this.player = this.service.createCharacter(val);
+    } else {
+      alert("Please choose a Character name");
+    }
   }
 
   embark() {
