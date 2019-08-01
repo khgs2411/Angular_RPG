@@ -1,10 +1,10 @@
 <div @expand id="window">
   <div @fade *ngIf="view" id="view" (onkeydown)="scrollFunc($event)">
-    <div id="exploration">
-      <div id="move">
+    <div class="" id="exploration">
+      <div class="" id="move">
         <app-character></app-character>
       </div>
-      <div id="testMonster"></div>
+      <div *ngIf="!defeated" id="testMonster"></div>
       <div>
         <button (click)="moveLeft()" class="btn btn-info mobileBtn">
           <<

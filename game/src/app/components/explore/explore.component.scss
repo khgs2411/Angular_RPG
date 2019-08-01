@@ -7,12 +7,12 @@ $desktop: 414px;
 }
 
 #window {
-  width: 90%;
+  width: 100%;
   height: -webkit-fill-available;
   border-style: ridge;
   position: absolute;
   background-color: white;
-  left: 5%;
+  // left: 5%;
 
   #view {
     height: -webkit-fill-available;
@@ -26,8 +26,8 @@ $desktop: 414px;
       display: inline-block;
       background-image: url("../../../assets/images/exploreBG.jpg");
       #move {
-        position: relative;
-        top: 89%;
+        position: absolute;
+        top: 91%;
       }
 
       .mobileBtn {
@@ -54,6 +54,6 @@ $desktop: 414px;
   width: 30px;
   position: absolute;
   left: 20%;
-  top: 87%;
+  top: 89%;
   background-color: blue;
 }

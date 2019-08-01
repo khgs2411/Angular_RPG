@@ -11,6 +11,7 @@ import { ThrowStmt } from "@angular/compiler";
 export class ExploreComponent implements OnInit {
   public view: boolean;
   public move: number;
+  public defeated: boolean;
   constructor() {}
 
   ngOnInit() {
@@ -20,6 +21,7 @@ export class ExploreComponent implements OnInit {
 
   initiateLocalVariables() {
     this.move = 0;
+    this.defeated = false;
     setTimeout(() => {
       this.view = true;
     }, 1500);
@@ -61,11 +63,14 @@ export class ExploreComponent implements OnInit {
   }
 
   collision() {
-    let mLoc = document.getElementById("testMonster").offsetLeft;
-    let pLoc = document.getElementById("move").offsetLeft;
-    console.log(mLoc, pLoc);
-    if (pLoc + 60 >= mLoc) {
-      console.log("Combat");
+    if (document.getElementById("testMonster")) {
+      let mLoc = document.getElementById("testMonster").offsetLeft;
+      let pLoc = document.getElementById("move").offsetLeft;
+      console.log(mLoc, pLoc);
+      if (pLoc + 60 >= mLoc) {
+        console.log("Combat");
+        this.defeated = true;
+      }
     }
   }
 }
