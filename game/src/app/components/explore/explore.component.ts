@@ -45,7 +45,6 @@ export class ExploreComponent implements OnInit {
     if (this.move < 1750) {
       this.move += 20;
       document.getElementById("move").style.marginLeft = "" + this.move + "px";
-      console.log(this.move);
       if (this.move >= 1360) {
         document.getElementById("view").scrollBy(25, 0);
       }
@@ -55,7 +54,6 @@ export class ExploreComponent implements OnInit {
     if (this.move > 100) {
       this.move += -20;
       document.getElementById("move").style.marginLeft = "" + this.move + "px";
-      console.log(this.move);
       if (this.move <= 1360) {
         document.getElementById("view").scrollBy(-25, 0);
       }

@@ -32,9 +32,13 @@ export class CreateComponent implements OnInit {
   }
 
   initiateLocalVariables() {
-    this.phase = "create";
-    this.player = this.service.initiateCharacter();
-    this.devParams();
+    if (this.player.name != "") {
+      this.phase = "create";
+      this.player = this.service.initiateCharacter();
+      this.devParams();
+    } else {
+      alert("Please enter a Character name");
+    }
   }
 
   changePhase(val: string) {
