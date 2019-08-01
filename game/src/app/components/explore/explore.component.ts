@@ -47,6 +47,7 @@ export class ExploreComponent implements OnInit {
         document.getElementById("view").scrollBy(25, 0);
       }
     }
+    this.collision();
   }
   moveLeft() {
     if (this.move > 0) {
@@ -55,6 +56,16 @@ export class ExploreComponent implements OnInit {
       if (this.move <= 1200) {
         document.getElementById("view").scrollBy(-25, 0);
       }
+    }
+    this.collision();
+  }
+
+  collision() {
+    let mLoc = document.getElementById("testMonster").offsetLeft;
+    let pLoc = document.getElementById("move").offsetLeft;
+    console.log(mLoc, pLoc);
+    if (pLoc + 60 >= mLoc) {
+      console.log("Combat");
     }
   }
 }
