@@ -4,7 +4,8 @@ import { ThrowStmt } from "@angular/compiler";
 
 @Component({
   selector: "app-explore",
-  templateUrl: "./explore.component.html",
+  // templateUrl: "./explore.component.html",
+  templateUrl: "./index.html",
   styleUrls: ["./explore.component.scss"],
   animations: [expand, fade]
 })
