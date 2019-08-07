@@ -1,9 +1,14 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from "@angular/core";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
-export class ExploreService {
+export class ExploreService implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  ngOnInit() {
+    this.initiateLocalVariables();
+  }
+
+  initiateLocalVariables() {}
 }
